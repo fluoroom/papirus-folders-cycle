@@ -7,7 +7,9 @@ changeEvery=3600 #seconds
 shuffleCycle=false
 
 #read config file
-CONFIG=~/.ps-folders-cycle
+USER_HOME=$(eval echo ~${SUDO_USER})
+APPS_DIR=/usr/share/applications
+CONFIG=$USER_HOME/.ps-folders-cycle
 if [[ -f "$CONFIG" ]]; then
     . $CONFIG
     echo "
@@ -51,7 +53,7 @@ while :; do   {
     papirus-folders -t $theme -C ${colors[actualIndex]} &
     if [ $shuffle == false ];  then
         actualIndex=$((actualIndex+1))
-    fi 
+    fi
     sleep $interval;
 }
 done
