@@ -19,7 +19,7 @@ Edit your config file (**~/.ps-folders-cycle**), here's an example:
 <pre><code>#!/usr/bin/bash
 changeEvery=300      #seconds | program wont accept less than 10, and recommended is 60 or higher
 theme=Papirus        #change if you're using Papirus-Dark or other variant.
-shuffleCycle=false   #activate random order  
+shuffleCycle=false   #activate random order
 
 #Enter colors separated by spaces or new lines.
 #Arrange in desired order of cycling.
