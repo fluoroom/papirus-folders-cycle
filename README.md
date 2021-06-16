@@ -20,6 +20,9 @@ Edit your config file (**~/.ps-folders-cycle**), here's an example:
 changeEvery=300      #seconds | program wont accept less than 10, and recommended is 60 or higher
 theme=Papirus        #change if you're using Papirus-Dark or other variant.
 shuffleCycle=false   #activate random order
+shuffleStart=true   #start from random color, continue in order (if not shuffling).
+startupNotif=true   #notify that program was started
+colorNotif=true     #notify when color changed
 
 #Enter colors separated by spaces or new lines.
 #Arrange in desired order of cycling.
