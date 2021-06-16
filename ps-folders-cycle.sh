@@ -4,8 +4,8 @@ allColors=(black bluegrey brown cyan green indigo nordic palebrown pink teal whi
 colors=$allColors
 theme=Papirus
 changeEvery=3600 #seconds
-shuffleCycle=false
-startupNotif=false
+shuffleCycle=false 
+startupNotif=false 
 colorNotif=false
 shuffleStart=true
 
@@ -44,13 +44,13 @@ colorsLength=${#colors[@]}
 actualIndex=0
 
 function notifyStartup () {
-    notify-send "papirus-folders-cycle started!"
+    notify-send "papirus-folders-cycle started!";
 }
 function notifyColor () {
-    notify-send "Folder color changed to ${1}"
+    notify-send "Folder color changed to ${1}";
 }
 function getRandomUpTo () {
-    echo "RANDOM % ${1}"
+    echo "RANDOM % ${1}";
 }
 
 
@@ -69,7 +69,9 @@ while :; do   {
         actualIndex=$shuffleIndex
     fi 
     papirus-folders -t $theme -C ${colors[actualIndex]}
-    if $colorNotif; then notifyColor ${colors[actualIndex]}; fi
+    if $colorNotif; then 
+    notifyColor ${colors[actualIndex]}
+    fi
     if [ $shuffle == false ];  then
         actualIndex=$((actualIndex+1))
     fi 
