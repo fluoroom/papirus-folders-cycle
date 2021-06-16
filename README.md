@@ -13,16 +13,19 @@ $ ./install.sh</code></pre>
 Once installed, the CLI is available:
 <pre><code>$ ps-fc-cli help
 Papirus Folders Cycle CLI (<b>ps-fc-cli</b>) has this available commands:
-<b>help / --help / -h</b>      Show this help.
-<b>enable</b>                  Enables cycling (from next log on).
-<b>disable</b>                 Stops cycling and removes autostart on log on.
-<b>uninstall</b>               Uninstalls Papirus Folders Cycle and CLI is self-destroyed forever.</code></pre>
+<b>help / --help / -h</b>   Show this help.
+<b>enable</b>               Enables cycling (from next log on).
+<b>disable</b>              Stops cycling and removes autostart on log on.
+<b>uninstall</b>            Uninstalls Papirus Folders Cycle and CLI is self-destroyed forever.</code></pre>
 Edit your config file (**~/.ps-folders-cycle**), here's an example:
 <pre><code>#!/usr/bin/bash
-changeEvery=300;     #seconds | program won't accept less than 10, and recommended is 60 or higher
-theme=Papirus        #change if you're using Papirus-Dark or other icon theme. Use quotes ("") if name has spaces.
+changeEvery=300;     #seconds | program won't accept less than 10,
+                     #and recommended is 60 or higher
+theme=Papirus        #change if you're using Papirus-Dark or other icon theme.
+                     #Use quotes ("") if name has spaces.
 shuffleCycle=false   #(true | false) activate random order
-shuffleStart=true    #(true | false) start from random color, continue in order (if not shuffling).
+shuffleStart=true    #(true | false) start from random color,
+                     #continue in order (if not shuffling).
 startupNotif=true    #(true | false) notify that program was started
 colorNotif=true      #(true | false) notify when color changed
 
