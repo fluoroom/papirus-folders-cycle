@@ -6,6 +6,12 @@ theme=Papirus        #change if you're using Papirus-Dark or other variant.
 
 shuffleCycle=false   #activate random order
 
+shuffleStart=true   #start from random color, continue in order (if not shuffling).
+
+startupNotif=true   #notify that program was started
+
+colorNotif=true     #notify when color changed
+
 # Enter colors separated by spaces or new lines.
 # Arrange in desired order of cycling.
 # Check available colors on https://github.com/PapirusDevelopmentTeam/papirus-folders

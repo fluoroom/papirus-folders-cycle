@@ -32,7 +32,7 @@ function disable () {
 
 function enable () {
     if checkInstalled==1; then
-    cp ps-folders-cycle.desktop $USER_HOME/.config/autostart/ps-folders-cycle.desktop && echo "$(bold "Enabled!") I'll start cycling on next log on.";
+    cp $APPS_DIR/ps-folders-cycle.desktop $USER_HOME/.config/autostart/ps-folders-cycle.desktop && echo "$(bold "Enabled!") I'll start cycling on next log on.";
     else
     echo "Missing files, please reinstall." && exit;
     fi

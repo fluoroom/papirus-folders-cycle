@@ -54,7 +54,7 @@ function install() {
     cp .ps-folders-cycle.example $USER_HOME/.ps-folders-cycle && echo ".ps-folders-cycle.example ->  ${USER_HOME}/.ps-folders-cycle $(tput bold)OK$(tput sgr0)"
   fi
   cp ps-folders-cycle.desktop $APPS_DIR/ps-folders-cycle.desktop && echo "ps-folders-cycle.desktop  ->  ${APPS_DIR}/ps-folders-cycle.desktop $(tput bold)OK$(tput sgr0)"
-  echo "${USER_HOME}/bin/ps-folders-cycle.sh" >>$APPS_DIR/ps-folders-cycle.desktop && chmod +x $APPS_DIR/ps-folders-cycle.desktop && echo "${APPS_DIR}/ps-folders-cycle.desktop $(tput bold)correctly configured.$(tput sgr0)"
+  echo "$USER_HOME/bin/ps-folders-cycle.sh" >> $APPS_DIR/ps-folders-cycle.desktop && chmod +x $APPS_DIR/ps-folders-cycle.desktop && echo "${APPS_DIR}/ps-folders-cycle.desktop $(tput bold)correctly configured.$(tput sgr0)"
   if [[ ! -d $USER_HOME/bin/ ]]; then
     mkdir $USER_HOME/bin/ && echo "Created ${USER_HOME}/bin/"
   fi
@@ -65,7 +65,7 @@ function install() {
   case "$choice" in
   y | Y)
     killall ps-folders-cycle.sh
-    cp ps-folders-cycle.desktop $USER_HOME/.config/autostart/ps-folders-cycle.desktop && echo "Autostart enabled $(bold OK)
+    cp $APPS_DIR/ps-folders-cycle.desktop $USER_HOME/.config/autostart/ps-folders-cycle.desktop && echo "Autostart enabled $(bold OK)
 Daemon will start on next log on.
 To disable use $(tput bold)ps-fc-cli disable$(tput sgr0)";;
   * ) echo "
