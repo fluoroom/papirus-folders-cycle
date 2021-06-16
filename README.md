@@ -1,7 +1,7 @@
 # papirus-folders-cycle
 Changes Papirus folder colors every X seconds. With selective colors and shuffle.
 
-![gif](https://i.imgur.com/XHxvll9.gif)
+![gif](https://i.imgur.com/tgKTgNe.gif) <sup><sup><sup><sup>(speed only for illustrative purposes)</sup></sup></sup></sup>
 
 This program is based on and **requires** previous installation of the great [papirus-folders](https://github.com/PapirusDevelopmentTeam/papirus-folders).
 ## Installation
