@@ -4,6 +4,13 @@ clear
 function bold() {
   echo "$(tput bold)${1}$(tput sgr0)"
 }
+function smso() {
+  echo "$(tput smso)${1}$(tput sgr0)"
+}
+function boldS() {
+  echo "$(tput bold)${1}$(tput sgr0)$(tput smso)"
+}
+
 #check if root
 if [ "$EUID" -ne 0 ]; then
   echo "Please run as root"
@@ -72,7 +79,9 @@ To disable use $(tput bold)ps-fc-cli disable$(tput sgr0)";;
 To enable use $(tput bold)ps-fc-cli enable$(tput sgr0)
 " ;;
   esac
-
+  echo "
+$(smso " Please install icon themes in $(boldS "~/.icons/") as i can't (and $(boldS "shouldn't")) have root access to read $(boldS /usr/share/icons/). 
+ Otherwise you'll recieve $(boldS "Error 404").                                                                            ")";
 }
 
 function bye() {

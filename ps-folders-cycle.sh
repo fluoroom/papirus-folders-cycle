@@ -48,11 +48,15 @@ function notifyColor () {
     notify-send "Folder color changed to ${1}";
 }
 function getRandomUpTo () {
-    echo "RANDOM % ${1}";
+    echo $(($RANDOM % $1));
+}
+function checkHomeDir () {
+    iconHomeDir="${USER_HOME}/.icons/${theme}";
+if [[ ! -d "$iconHomeDir" ]]; then notify-send "Papirus Folders Cycle Error 404" && exit; fi
 }
 
 
-if $shuffleStart; then actualIndex= getRandomUpTo $colorsLength; fi
+if $shuffleStart; then actualIndex=$(getRandomUpTo $colorsLength); fi
 
 function daemon (){
 while :; do   {
@@ -66,10 +70,8 @@ while :; do   {
         done
         actualIndex=$shuffleIndex
     fi 
-    papirus-folders -t $theme -C ${colors[actualIndex]}
-    if $colorNotif; then 
-    notifyColor ${colors[actualIndex]};
-    fi
+    checkHomeDir;
+    papirus-folders -t $theme -C ${colors[actualIndex]} && if $colorNotif; then notifyColor ${colors[actualIndex]}; fi
     if [ $shuffle == false ];  then
         actualIndex=$((actualIndex+1))
     fi 

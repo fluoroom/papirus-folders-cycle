@@ -81,7 +81,8 @@ function help () {
 $(bold "help / --help / -h")      Show this help.
 $(bold enable)                  Enables cycling (from next log on).
 $(bold disable)                 Stops cycling and removes autostart on log on.
-$(bold uninstall)               Uninstalls Papirus Folders Cycle and CLI is self-destroyed forever." && exit;
+$(bold uninstall)               Uninstalls Papirus Folders Cycle and CLI is self-destroyed forever.
+$(bold "Error 404:")              This happens when i don't find the icon theme's folder in $(bold ~/.icons/), please install icons there as i can't have root access to read $(bold /usr/share/icons/)." && exit;
 }
 
 case "$1" in

@@ -16,7 +16,8 @@ Papirus Folders Cycle CLI (<b>ps-fc-cli</b>) has this available commands:
 <b>help / --help / -h</b>   Show this help.
 <b>enable</b>               Enables cycling (from next log on).
 <b>disable</b>              Stops cycling and removes autostart on log on.
-<b>uninstall</b>            Uninstalls Papirus Folders Cycle and CLI is self-destroyed forever.</code></pre>
+<b>uninstall</b>            Uninstalls Papirus Folders Cycle and CLI is self-destroyed forever.
+<b>Error 404:</b>           This happens when i don't find the icon theme's folder in <b>~/.icons/</b>, please install icons there as i can't have root access to read <b>/usr/share/icons/</b>.</code></pre>
 Edit your config file (**~/.ps-folders-cycle**), here's an example:
 <pre><code>#!/usr/bin/bash
 changeEvery=300;     # seconds | program won't accept less than 10,
